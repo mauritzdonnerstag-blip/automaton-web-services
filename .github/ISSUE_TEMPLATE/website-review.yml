@@ -1,0 +1,59 @@
+name: "Request a website review"
+description: "Request a preliminary, human-reviewed report about a public web page."
+title: "[Website review] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for your interest in Automaton Web Services.
+
+        **Public request:** GitHub issues are visible to everyone. Please do not share names of private individuals, email addresses, phone numbers, account details, passwords, screenshots of private dashboards, or confidential information.
+
+        This pilot offers preliminary observations about a **single public HTTPS page**. It is **not** a professional accessibility certification, a full-site audit, or a guarantee of improvements. Requests are reviewed before work begins, and a response is not guaranteed.
+  - type: input
+    id: organization
+    attributes:
+      label: "Business or project name"
+      description: "Provide a public business name only (no personal contact details)."
+      placeholder: "Example: Northside Studio"
+    validations:
+      required: true
+  - type: input
+    id: website_url
+    attributes:
+      label: "Public website URL"
+      description: "A single publicly accessible HTTPS page. No logins, private staging sites, or tracking links."
+      placeholder: "https://www.example.org/"
+    validations:
+      required: true
+  - type: dropdown
+    id: review_focus
+    attributes:
+      label: "What would you like checked?"
+      description: "Choose the primary focus for this preliminary review."
+      options:
+        - "Page headings and document structure"
+        - "Images and alternative-text indicators"
+        - "Links and navigation basics"
+        - "General HTML quality overview"
+    validations:
+      required: true
+  - type: textarea
+    id: goal
+    attributes:
+      label: "What would a useful report help you understand?"
+      description: "Optional public background. Please avoid private business or customer information."
+      placeholder: "For example: Are our page headings understandable and well structured?"
+    validations:
+      required: false
+  - type: checkboxes
+    id: permissions
+    attributes:
+      label: "Confirmation"
+      options:
+        - label: "I own or manage this website, or I have permission to request feedback about it."
+          required: true
+        - label: "I understand this issue and any public replies are visible to everyone, and I will not submit personal or confidential information."
+          required: true
+        - label: "I understand that this is a preliminary review, not a certified accessibility audit or a guarantee of service."
+          required: true
