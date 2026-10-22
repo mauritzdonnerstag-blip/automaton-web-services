@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Automaton Web Services offers limited, human-reviewed public-page quality reports during an early pilot.">
+  <title>Automaton Web Services — Preliminary Website Reviews</title>
+  <style>
+    :root { color-scheme: light; font-family: system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; }
+    *,*::before,*::after { box-sizing: border-box; }
+    body { margin: 0; color: #142337; background: #f6f8fb; line-height: 1.65; }
+    a { color: #1555a2; }
+    a:focus-visible { outline: 3px solid #ef9f32; outline-offset: 4px; }
+    header { background: #102a44; color: white; }
+    .wrap { max-width: 980px; margin: auto; padding: 1.25rem 1.5rem; }
+    nav { display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+    nav a { color: #d7eafb; text-decoration: none; }
+    .brand { font-weight: 800; letter-spacing: -.02em; }
+    .hero { padding: 4.5rem 0 4.75rem; max-width: 740px; }
+    .eyebrow { color: #acd6fa; font-size: .85rem; text-transform: uppercase; letter-spacing: .11em; font-weight: 750; }
+    h1 { font-size: clamp(2.4rem, 6vw, 4.4rem); line-height: 1.1; margin: .65rem 0 1.1rem; letter-spacing: -.04em; }
+    h2 { letter-spacing: -.025em; line-height: 1.2; }
+    .lead { font-size: 1.15rem; color: #e1ecf7; }
+    .button { display: inline-block; margin-top: 1rem; background: #f2b653; color: #142337; text-decoration: none; padding: .85rem 1.3rem; border-radius: .6rem; font-weight: 800; }
+    .button:hover { background: #ffd389; }
+    main { padding: 2.5rem 0 3.75rem; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); gap: 1rem; margin: 1.4rem 0 2.75rem; }
+    .card { background: #fff; border: 1px solid #dce4ed; border-radius: .85rem; padding: 1.3rem; }
+    .card h3 { margin: 0 0 .4rem; }
+    .card p { margin: 0; color: #4c5d70; }
+    .note { background: #e9f1fb; border-left: 4px solid #356eb0; padding: 1rem 1.2rem; border-radius: .3rem; }
+    footer { border-top: 1px solid #dce4ed; color: #526277; padding: 1rem 0 2rem; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <nav aria-label="Main navigation">
+        <div class="brand">Automaton Web Services</div>
+        <a href="#how-it-works">How it works</a>
+      </nav>
+      <section class="hero" aria-labelledby="title">
+        <div class="eyebrow">Early pilot · Public-page reports</div>
+        <h1 id="title">Understand your website's structure.</h1>
+        <p class="lead">Request a preliminary review of one publicly accessible page. We look for observable HTML quality and accessibility indicators, then prepare findings for human review.</p>
+        <a class="button" href="https://github.com/mauritzdonnerstag-blip/automaton-web-services/issues/new?template=website-review.yml">Request a website review →</a>
+        <p>Requests are submitted through public GitHub Issues; a GitHub account is required.</p>
+      </section>
+    </div>
+  </header>
+  <main class="wrap">
+    <section aria-labelledby="scope">
+      <h2 id="scope">What the preliminary report can cover</h2>
+      <div class="grid">
+        <article class="card"><h3>Page structure</h3><p>Document titles, visible heading patterns, and basic HTML organization.</p></article>
+        <article class="card"><h3>Images and links</h3><p>Observable link and image-markup indicators that may warrant closer inspection.</p></article>
+        <article class="card"><h3>Suggested next checks</h3><p>A practical list of questions to review manually before making changes.</p></article>
+      </div>
+    </section>
+    <section id="how-it-works" aria-labelledby="process">
+      <h2 id="process">How requests work</h2>
+      <ol>
+        <li>Submit the URL of a public HTTPS page that you own, manage, or are authorized to request feedback about.</li>
+        <li>The request is reviewed for suitability before any report is prepared.</li>
+        <li>If accepted, a preliminary HTML-based report can be produced and checked by a human before it is shared.</li>
+      </ol>
+      <div class="note"><strong>Privacy and scope:</strong> GitHub Issues and public responses are visible to everyone. Do not include confidential details or personal contact information. This is not a whole-site audit, security test, compliance certificate, or promise of results. This early pilot does not collect payments.</div>
+    </section>
+  </main>
+  <footer><div class="wrap">Automaton Web Services · Experimental pilot · <a href="https://github.com/mauritzdonnerstag-blip/automaton-web-services">GitHub repository</a></div></footer>
+</body>
+</html>
